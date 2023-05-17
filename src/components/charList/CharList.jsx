@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
+
 
 import './charList.scss';
 import useMarvelService from '../../service/MarvelService';
@@ -31,9 +31,9 @@ const CharList = ({onCharSelected}) =>  {
 
     const onCharListLoaded = (nextCharList) => {
 
-        setCharList (charList => [ ...charList, ...nextCharList]);
-        setNewLoading (newLoading => false);
-        setOffset (ofsset => offset + 9);
+        setCharList (prevCharList => [ ...prevCharList, ...nextCharList]);
+        setNewLoading ( false);
+        setOffset ( offset + 9);
     }
     
 
@@ -96,9 +96,6 @@ const CharList = ({onCharSelected}) =>  {
         )
     
 
-}
-CharList.propTypes = {
-    onCharSelected: PropTypes.func.isRequired
 }
 
 export default CharList;

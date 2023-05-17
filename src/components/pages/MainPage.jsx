@@ -9,6 +9,7 @@ const MainPage = () => {
 
     function onCharSelected(id) {
         setSelectedChar(id);
+        
     }
 
 
