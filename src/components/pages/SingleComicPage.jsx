@@ -43,7 +43,8 @@ const SingleComicPage = () => {
 }
 
 const View = ({ comic }) => {
-    const { thumbnail, title, description, page, prices } = comic;
+    const { thumbnail, title, description, page, prices, date} = comic;
+   
     return (
 
         <div className="single-comic">
@@ -51,6 +52,7 @@ const View = ({ comic }) => {
             <div className="single-comic__info">
                 <h2 className="single-comic__name">{title}</h2>
                 <p className="single-comic__descr">{description}</p>
+                <p className="single-comic__date">Release date: {date}</p>
                 <p className="single-comic__descr">{page}</p>
                 <div className="single-comic__price">{prices}</div>
             </div>

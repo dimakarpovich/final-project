@@ -2,8 +2,8 @@
 
 .single-comic {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: 293px 550px auto;
+    position: relative;
+    display:flex;
     column-gap: 50px;
     align-items: start;
     &__img {
@@ -11,13 +11,13 @@
         height: 450px;
     }
     &__name {
-        color: #fff;
+        color: $main-color;
         font-weight: bold;
         font-size: 22px;
         line-height: 29px;
     }
-    &__descr {
-        color: #fff;
+    &__descr, &__date {
+        color: #ffff;
         font-size: 18px;
         line-height: 24px;
         margin-top: 25px;
@@ -30,7 +30,8 @@
         margin-top: 25px;
     }
     &__back {
-        justify-self: end;
+        position: absolute;
+        right: 0;
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;

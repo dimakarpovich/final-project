@@ -17,7 +17,7 @@ const  useMarvelService = () => {
         const res = await request(`${API_BASE}characters/${id}?${API_KEY}`);
         return transformCharacter(res.data.results[0]);
     }
-
+  
    
 
     const transformCharacter = (char) => {
@@ -26,9 +26,12 @@ const  useMarvelService = () => {
             name: char.name,
             description: char.description ? `${char.description.slice(0,210)}...` : 'Character description not found',
             thumbnail: char.thumbnail.path + '.' + char.thumbnail.extension,
-            homepage: char.urls[0].url,
             wiki: char.urls[1].url,
-            comics: char.comics.items
+            homepage: char.urls[0].url,
+            comics: char.comics.items,
+            comicsCount: char.comics.available,
+            series: char.series.available,
+            stories: char.stories.available
         }
     }
 
@@ -47,7 +50,8 @@ const  useMarvelService = () => {
         return {
             id: comics.id,
             title: comics.title ,
-            description: comics.description || 'there is not description',
+            date: comics.modified ? comics.modified.split('T')[0].split('-').reverse().join('/') : 'No date',
+            description: comics.description || 'There is not description',
             thumbnail: comics.thumbnail.path + '.' + comics.thumbnail.extension,
             page: comics.pageCount ? ` ${comics.pageCount} pages` : 'There are no pages in the comic',
             prices: comics.prices[0].price ? `${comics.prices[0].price} $` : 'No price',
@@ -62,3 +66,4 @@ const  useMarvelService = () => {
     return {loading, error, getAllCharacters, getCharacter, getAllComics, getComicsId};
 }
 export default useMarvelService;
+

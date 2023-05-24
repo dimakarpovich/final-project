@@ -9,7 +9,7 @@
         background:#fff ;
         display: flex;
         width: 50%;
-        // grid-template-columns: 180px auto;
+      
         column-gap: 30px;
     }
     &__img {
@@ -20,7 +20,7 @@
     &__info {
         display: flex;
         flex-direction: column;
-        // grid-template-rows: minmax(29px, auto) 90px 38px;
+    
         row-gap: 10px;
         padding-top: 3px;
     }
