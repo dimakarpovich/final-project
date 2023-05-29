@@ -12,7 +12,6 @@ const MainPage = () => {
 
     function onCharSelected(id) {
         setSelectedChar(id);
-
     }
 
 
@@ -21,7 +20,8 @@ const MainPage = () => {
             <RandomChar />
             <div className="char__content">
                 <CharList onCharSelected={onCharSelected} />
-                 <CharInfo charId={selectedChar} />
+                <CharInfo charId={selectedChar} />
+
                 <img style={{ position: 'absolute', right: '0', zIndex: '-10', bottom: '0' }} src={Spider} alt="" />
             </div>
 

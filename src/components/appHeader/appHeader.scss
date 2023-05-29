@@ -27,10 +27,33 @@
         
         &-link:hover {
                 transition:ease-in .4s;
-                transform: scale(1.1);  
-                  
+                transform: scale(1.1);          
+        } 
+    }
+}
+@media (max-width: 769px) {
+    .app {
+        &__title {
+            font-size: 36px;
         }
-        
-        
+        &__menu {
+            &-lists {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 426px) {
+    .app {
+        &__title {
+            font-size: 35px;
+        }
+        &__menu {
+            &-lists {
+                font-size: 30px;
+            }
+        }
     }
 }

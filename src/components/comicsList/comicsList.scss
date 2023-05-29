@@ -41,3 +41,53 @@
     }
 }
 
+
+@media (max-width: 769px) {
+    .comics {
+        &__list {
+            button {
+                margin-top: 93px;
+            }
+        }
+        &__flex {
+           justify-content: space-around;
+           gap: 90px;
+        }
+        &__item {
+            width: 300px;
+            &-img {
+                width: 300px;
+            }
+            &-name {
+                font-size: 20px;
+            }
+            &-price {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .comics {
+       
+        &__item {
+            width: 490px;
+            margin: 40px 0;
+            &-img {
+                width: 490px;
+            }
+            &-name {
+                font-size: 31px;
+                line-height: 35px;
+            }
+            &-price {
+                margin-top: 15px;
+                font-size: 31px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+

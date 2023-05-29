@@ -12,7 +12,7 @@ import Loader from '../loader/Loader';
 const ComicsList = () => {
     const [comicsList, setComicsList] = useState([]);
     const [newLoading, setNewLoading] = useState(false);
-    const [offset, setOffset] = useState(0);
+    const [offset, setOffset] = useState(200);
 
     const { error, loading, getAllComics } = useMarvelService();
 

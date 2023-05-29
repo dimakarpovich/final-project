@@ -11,7 +11,7 @@ const CharList = ({onCharSelected}) =>  {
     
     const [charList, setCharList] = useState([]);
     const [ newLoading, setNewLoading] = useState(false); 
-    const [offset, setOffset] = useState (210);
+    const [offset, setOffset] = useState (190);
     
    
     const {loading, error, getAllCharacters} =  useMarvelService();
@@ -52,7 +52,7 @@ const CharList = ({onCharSelected}) =>  {
         const items =  arr.map((item, index) => {
             let imgStyle = {'objectFit' : 'cover'};
             if (item.thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
-                imgStyle = {'objectFit' : 'unset'};
+                imgStyle = {'objectFit' : 'fill'};
             }
             
 
@@ -82,7 +82,7 @@ const CharList = ({onCharSelected}) =>  {
         const items = renderItems(charList);
 
         const errorMessage = error ? <Error/> : null;
-        const spinner = loading && newLoading ? <Loader/> : null;
+        const spinner = loading && !newLoading ? <Loader/> : null;
 
         return (
             <div className="char__list">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Error from '../error/Error';
 import Loader from '../loader/Loader';
 import useMarvelService from '../../service/MarvelService';
@@ -31,13 +31,9 @@ const CharInfo = ({ charId }) => {
         }
 
         getCharacter(charId)
-            .then(onCharLoaded)
+            .then(char => setChar(char))
     }
 
-
-    const onCharLoaded = (char) => {
-        setChar(char);
-    }
 
 
     const skeleton = char || loading || error ? null : <Skeleton />;
@@ -66,32 +62,36 @@ const View = ({ char }) => {
     }
     return (
         <>
-          
-                <div className="char__basics">
-                    <img src={thumbnail} alt={name} style={imgStyle} />
-                    <div>
-                        <div className="char__info-name">{name}</div>
-                        <div className="char__btns">
-                            <Link   to = {`characters/${id}`}className="button button__main">
-                                <div className="inner">Homepage</div>
-                            </Link>
-                            <a href={wiki} className="button button__secondary">
-                                <div className="inner">Wiki</div>
-                            </a>
-                        </div>
+
+            <div className="char__basics">
+                <img src={thumbnail} alt={name} style={imgStyle} />
+                <div>
+                    <div className="char__info-name">{name}</div>
+                    <div className="char__btns">
+                        <Link to={`characters/${id}`} className="button button__main">
+                            <div className="inner">Homepage</div>
+                        </Link>
+                        <a href={wiki} className="button button__secondary">
+                            <div className="inner">Wiki</div>
+                        </a>
                     </div>
                 </div>
+            </div>
             <div className="char__descr">{description}</div>
             <div className="char__comics">Comics:</div>
             <ul className="char__comics-list">
-                {comics.length > 0 ? null : 'There is no comics with this character'}
+                {comics.length === 0 ? 'There is no comics with this character' : null}
                 {
                     comics.map((item, i) => {
-
+                        const {resourceURI} = item;
+                        const id = resourceURI.split('/')[6];
                         return (
                             <li key={i} className="char__comics-item">
-                                {item.name}
+                                <Link to={`comics/${id}`} >
+                                    {item.name}
+                                </Link>
                             </li>
+
                         )
                     })
                 }
@@ -99,6 +99,7 @@ const View = ({ char }) => {
         </>
     )
 }
+
 
 export default CharInfo;
 

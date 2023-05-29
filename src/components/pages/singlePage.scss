@@ -1,6 +1,6 @@
 @import '../../style/variables.scss';
 
-.single-comic {
+.single {
     margin-top: 50px;
     position: relative;
     display:flex;
@@ -39,4 +39,16 @@
             color: $main-color;
         }
     }
+}
+
+@media (max-width: 769px) {
+    .single {
+        &__name {
+            font-size: 26px;
+        }
+        &__descr, &__date, &__back {
+            font-size: 23px;
+        }
+    }
+
 }
