@@ -6,8 +6,8 @@ import Page404 from "./Page404";
 import Loader from "../loader/Loader";
 import {Link, useParams, useLocation} from "react-router-dom"
 
-import dared from "../../resources/img/daredevil-logo-D06D1F6324-seeklogo.com.png"
-import Vision from "../../resources/img/vision.png"
+import dared from "../../resources/img/dared.png"
+
 
 
 const SingleCharPage = () => {
