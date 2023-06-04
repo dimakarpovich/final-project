@@ -85,6 +85,7 @@ const View = ({ char }) => {
                     comics.map((item, i) => {
                         const {resourceURI} = item;
                         const id = resourceURI.split('/')[6];
+                        console.log(resourceURI)
                         return (
                             <li key={i} className="char__comics-item">
                                 <Link to={`comics/${id}`} >

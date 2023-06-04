@@ -6,15 +6,15 @@ import Page404 from "./Page404";
 import Loader from "../loader/Loader";
 import {Link, useParams, useLocation} from "react-router-dom"
 
-import dared from "../../resources/img/dared.png"
+import dared from "../../resources/img/darede.png"
 
 
 
 const SingleCharPage = () => {
     const {charId} = useParams();
-    const {pathname} = useLocation();
-    console.log(pathname);
-    console.log(charId);
+    console.log(useLocation());
+   
+    console.log(useParams());
     const [char, setChar] = useState(null);
     const { loading, error, getCharacter } = useMarvelService();
 
@@ -49,7 +49,7 @@ const SingleCharPage = () => {
     )
 }
 
-const View = ({ char, isChar}) => {
+const View = ({ char}) => {
     const { thumbnail, name, description, comicsCount, series, stories} = char;
     let imgStyle = { 'objectFit': 'cover' };
     if (thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
