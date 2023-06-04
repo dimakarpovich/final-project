@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/https//dimakarpovich.github.io/final-project/static/css/main.eea77ca2.chunk.css",
+    "main.js": "/https//dimakarpovich.github.io/final-project/static/js/main.c29839c4.chunk.js",
+    "main.js.map": "/https//dimakarpovich.github.io/final-project/static/js/main.c29839c4.chunk.js.map",
+    "runtime-main.js": "/https//dimakarpovich.github.io/final-project/static/js/runtime-main.f3f019ff.js",
+    "runtime-main.js.map": "/https//dimakarpovich.github.io/final-project/static/js/runtime-main.f3f019ff.js.map",
+    "static/js/2.e3292c99.chunk.js": "/https//dimakarpovich.github.io/final-project/static/js/2.e3292c99.chunk.js",
+    "static/js/2.e3292c99.chunk.js.map": "/https//dimakarpovich.github.io/final-project/static/js/2.e3292c99.chunk.js.map",
+    "index.html": "/https//dimakarpovich.github.io/final-project/index.html",
+    "static/css/main.eea77ca2.chunk.css.map": "/https//dimakarpovich.github.io/final-project/static/css/main.eea77ca2.chunk.css.map",
+    "static/js/2.e3292c99.chunk.js.LICENSE.txt": "/https//dimakarpovich.github.io/final-project/static/js/2.e3292c99.chunk.js.LICENSE.txt",
+    "static/media/Avengers.4065c8f9.png": "/https//dimakarpovich.github.io/final-project/static/media/Avengers.4065c8f9.png",
+    "static/media/Avengers_logo.9eaf2193.png": "/https//dimakarpovich.github.io/final-project/static/media/Avengers_logo.9eaf2193.png",
+    "static/media/style.scss": "/https//dimakarpovich.github.io/final-project/static/media/background.fcecb16c.jpg",
+    "static/media/darede.0d6562fd.png": "/https//dimakarpovich.github.io/final-project/static/media/darede.0d6562fd.png",
+    "static/media/error.0a050497.gif": "/https//dimakarpovich.github.io/final-project/static/media/error.0a050497.gif",
+    "static/media/ironman.d0179147.png": "/https//dimakarpovich.github.io/final-project/static/media/ironman.d0179147.png",
+    "static/media/mjolnir.61f31e18.png": "/https//dimakarpovich.github.io/final-project/static/media/mjolnir.61f31e18.png",
+    "static/media/top-most-iconic-superheroes-379687.1a2eec0f.png": "/https//dimakarpovich.github.io/final-project/static/media/top-most-iconic-superheroes-379687.1a2eec0f.png",
+    "static/media/vision.067d4ae1.png": "/https//dimakarpovich.github.io/final-project/static/media/vision.067d4ae1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3f019ff.js",
+    "static/js/2.e3292c99.chunk.js",
+    "static/css/main.eea77ca2.chunk.css",
+    "static/js/main.c29839c4.chunk.js"
+  ]
+}
